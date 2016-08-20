@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_popup_window_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/colorbg"
+    tools:context="popup.popfisher.com.smartpopupwindow.PopupWindowMainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:text="关于PopupWindow的一些使用案例" />
+
+    <Button
+        android:id="@+id/popup_test_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="点击PopupWindow外部不会响应消失事件的情况"/>
+
+    <Button
+        android:id="@+id/popup_test_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="点击PopupWindow外部正常响应消失事件的情况"/>
+
+    <Button
+        android:id="@+id/popup_test_button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="自己计算并控制PopupWindow弹出位置的情况"/>
+
+</LinearLayout>

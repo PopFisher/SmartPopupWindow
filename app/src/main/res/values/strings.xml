@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartPopupWindow</string>
+    <string name="menu_item1">菜单项1</string>
+    <string name="menu_item2">菜单项2</string>
+    <string name="menu_item3">菜单项3</string>
+    <string name="menu_item4">菜单项4</string>
+    <string name="menu_item5">菜单项5</string>
+</resources>
