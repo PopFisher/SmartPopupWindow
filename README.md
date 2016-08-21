@@ -1,8 +1,10 @@
 # SmartPopupWindow
 提供关于PopupWindow使用过程中遇到的一些特殊问题的解决方案
 
-1. PopupWindow不响应点击外部消失和返回键消失的解决方法
-2. PopupWindow精确计算要显示位置原理和方法
+1. PopupWindow不响应点击外部消失和返回键消失的解决方法，博文地址：http://www.cnblogs.com/popfisher/p/5608717.html
+2. PopupWindow精确计算要显示位置原理和方法，博文地址：http://www.cnblogs.com/popfisher/p/5608436.html
+
+
 
 效果如下图所示：
 
