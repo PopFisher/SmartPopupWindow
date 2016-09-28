@@ -1,7 +1,5 @@
 package popup.popfisher.com.smartpopupwindow;
 
-import android.content.Context;
-import android.util.TypedValue;
 import android.view.View;
 
 /**
@@ -40,9 +38,5 @@ public class PopupWindowUtil {
             windowPos[1] = anchorLoc[1] + anchorHeight;
         }
         return windowPos;
-    }
-
-    public static int dp2px(Context context, float dpValue) {
-        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, context.getResources().getDisplayMetrics()) + 0.5f);
     }
 }

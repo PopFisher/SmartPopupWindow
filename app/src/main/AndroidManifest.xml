@@ -14,8 +14,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomPosPopupActivity" >
-        </activity>
+        <activity android:name=".CustomPosPopupActivity" />
+        <activity android:name=".TopBottomArrowPopupActivity" />
     </application>
 
 </manifest>

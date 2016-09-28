@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_popup_window_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@android:color/white"
+    tools:context="popup.popfisher.com.smartpopupwindow.PopupWindowMainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"/>
+
+        <Button
+            android:id="@+id/buttion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="中间"/>
+
+        <Button
+            android:id="@+id/buttion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="右边"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/buttion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"/>
+
+        <Button
+            android:id="@+id/buttion5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="中间"/>
+
+        <Button
+            android:id="@+id/buttion6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="右边"/>
+    </RelativeLayout>
+</LinearLayout>

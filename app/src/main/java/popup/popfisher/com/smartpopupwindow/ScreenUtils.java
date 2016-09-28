@@ -1,6 +1,7 @@
 package popup.popfisher.com.smartpopupwindow;
 
 import android.content.Context;
+import android.util.TypedValue;
 
 /**
  * Created by popfisher on 2016/8/19.
@@ -18,5 +19,9 @@ public class ScreenUtils {
      */
     public static int getScreenWidth(Context context) {
         return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    public static float dp2px(Context context, float dp) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
 }

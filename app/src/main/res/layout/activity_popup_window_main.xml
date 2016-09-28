@@ -25,6 +25,7 @@
         android:layout_marginTop="20dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
+        android:textColor="@android:color/white"
         android:text="点击PopupWindow外部不会响应消失事件的情况"/>
 
     <Button
@@ -34,6 +35,7 @@
         android:layout_marginTop="10dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
+        android:textColor="@android:color/white"
         android:text="点击PopupWindow外部正常响应消失事件的情况"/>
 
     <Button
@@ -43,6 +45,17 @@
         android:layout_marginTop="10dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
+        android:textColor="@android:color/white"
         android:text="自己计算并控制PopupWindow弹出位置的情况"/>
+
+    <Button
+        android:id="@+id/popup_test_button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="指定View,向下向上弹出，有箭头，showAsDropDown实现"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>

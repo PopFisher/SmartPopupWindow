@@ -18,6 +18,7 @@ public class CustomPosPopupActivity extends Activity {
 
     private PopupWindow mPopupWindow;
     private ListView mListView;
+    private ViewHolder mViewHolder = new ViewHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,7 @@ public class CustomPosPopupActivity extends Activity {
         mPopupWindow.setBackgroundDrawable(new ColorDrawable());
         // 设置好参数之后再show
         int windowPos[] = PopupWindowUtil.calculatePopWindowPos(anchorView, contentView);
-
-        int xOff = PopupWindowUtil.dp2px(this, 20); // 可以自己调整偏移
+        int xOff = 20; // 可以自己调整偏移
         windowPos[0] -= xOff;
         mPopupWindow.showAtLocation(anchorView, Gravity.TOP | Gravity.START, windowPos[0], windowPos[1]);
     }
@@ -84,24 +84,21 @@ public class CustomPosPopupActivity extends Activity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            final ViewHolder viewHolder;
             if (convertView == null) {
-                viewHolder = new ViewHolder();
                 convertView = LayoutInflater.from(getBaseContext()).inflate(R.layout.listview_item, null);
-                viewHolder.moreRoot = convertView.findViewById(R.id.more_root);
-                viewHolder.moreImgv = convertView.findViewById(R.id.more_imageView);
-                convertView.setTag(viewHolder);
+                mViewHolder.moreRoot = convertView.findViewById(R.id.more_root);
+                mViewHolder.moreImgv = convertView.findViewById(R.id.more_imageView);
+                convertView.setTag(mViewHolder);
             } else {
-                viewHolder = (ViewHolder) convertView.getTag();
+                mViewHolder = (ViewHolder) convertView.getTag();
             }
-            View.OnClickListener listener = new View.OnClickListener() {
+
+            mViewHolder.moreRoot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showPopupWindow(viewHolder.moreImgv);
+                    showPopupWindow(mViewHolder.moreImgv);
                 }
-            };
-            convertView.setOnClickListener(listener);
-            viewHolder.moreRoot.setOnClickListener(listener);
+            });
             return convertView;
         }
     }

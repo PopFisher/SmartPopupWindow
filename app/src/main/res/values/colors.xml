@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF1010</color>
-    <color name="colorbg">#ffffffff</color>
+    <color name="colorbg">#90ffffff</color>
     <color name="menu_item_normal_bg">#FFFFFFFF</color>
     <color name="menu_item_press_bg">#d6d2d3</color>
     <color name="menu_item_divider_color">#d6d2d3</color>
