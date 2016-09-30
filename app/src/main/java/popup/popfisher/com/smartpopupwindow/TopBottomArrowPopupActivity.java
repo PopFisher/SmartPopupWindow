@@ -2,6 +2,7 @@ package popup.popfisher.com.smartpopupwindow;
 
 import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -112,34 +113,20 @@ public class TopBottomArrowPopupActivity extends Activity implements View.OnClic
                 onClickListener.onClick(v);
             }
         });
-        final View upArrow = contentView.findViewById(R.id.up_arrow);
-        final View downArrow = contentView.findViewById(R.id.down_arrow);
 
         contentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                int pos[] = new int[2];
-                contentView.getLocationOnScreen(pos);
-                int popLeftPos = pos[0];
-                anchorView.getLocationOnScreen(pos);
-                int anchorLeftPos = pos[0];
-                int arrowLeftMargin = anchorLeftPos - popLeftPos + anchorView.getWidth() / 2 - upArrow.getWidth() / 2;
-                upArrow.setVisibility(popupWindow.isAboveAnchor() ? View.INVISIBLE : View.VISIBLE);
-                downArrow.setVisibility(popupWindow.isAboveAnchor() ? View.VISIBLE : View.INVISIBLE);
-
-                RelativeLayout.LayoutParams upArrowParams = (RelativeLayout.LayoutParams) upArrow.getLayoutParams();
-                upArrowParams.leftMargin = arrowLeftMargin;
-                RelativeLayout.LayoutParams downArrowParams = (RelativeLayout.LayoutParams) downArrow.getLayoutParams();
-                downArrowParams.leftMargin = arrowLeftMargin;
+                autoAdjustArrowPos(popupWindow, contentView, anchorView);
                 contentView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
             }
         });
         // 如果不设置PopupWindow的背景，有些版本就会出现一个问题：无论是点击外部区域还是Back键都无法dismiss弹框
         popupWindow.setBackgroundDrawable(new ColorDrawable());
         // setOutsideTouchable设置生效的前提是setTouchable(true)和setFocusable(false)
-        popupWindow.setOutsideTouchable(true);
-        popupWindow.setTouchable(true);
-        popupWindow.setFocusable(false);
+        popupWindow.setOutsideTouchable(false);
+        popupWindow.setTouchable(true);             // 设置为true之后，PopupWindow才可以响应事件
+        popupWindow.setFocusable(false);            //
         popupWindow.setTouchInterceptor(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -150,5 +137,23 @@ public class TopBottomArrowPopupActivity extends Activity implements View.OnClic
         return popupWindow;
     }
 
+    private void autoAdjustArrowPos(PopupWindow popupWindow, View contentView, View anchorView) {
+        View upArrow = contentView.findViewById(R.id.up_arrow);
+        View downArrow = contentView.findViewById(R.id.down_arrow);
+
+        int pos[] = new int[2];
+        contentView.getLocationOnScreen(pos);
+        int popLeftPos = pos[0];
+        anchorView.getLocationOnScreen(pos);
+        int anchorLeftPos = pos[0];
+        int arrowLeftMargin = anchorLeftPos - popLeftPos + anchorView.getWidth() / 2 - upArrow.getWidth() / 2;
+        upArrow.setVisibility(popupWindow.isAboveAnchor() ? View.INVISIBLE : View.VISIBLE);
+        downArrow.setVisibility(popupWindow.isAboveAnchor() ? View.VISIBLE : View.INVISIBLE);
+
+        RelativeLayout.LayoutParams upArrowParams = (RelativeLayout.LayoutParams) upArrow.getLayoutParams();
+        upArrowParams.leftMargin = arrowLeftMargin;
+        RelativeLayout.LayoutParams downArrowParams = (RelativeLayout.LayoutParams) downArrow.getLayoutParams();
+        downArrowParams.leftMargin = arrowLeftMargin;
+    }
 
 }
