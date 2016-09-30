@@ -124,7 +124,7 @@ public class TopBottomArrowPopupActivity extends Activity implements View.OnClic
         // 如果不设置PopupWindow的背景，有些版本就会出现一个问题：无论是点击外部区域还是Back键都无法dismiss弹框
         popupWindow.setBackgroundDrawable(new ColorDrawable());
         // setOutsideTouchable设置生效的前提是setTouchable(true)和setFocusable(false)
-        popupWindow.setOutsideTouchable(false);
+        popupWindow.setOutsideTouchable(true);
         popupWindow.setTouchable(true);             // 设置为true之后，PopupWindow才可以响应事件
         popupWindow.setFocusable(false);            //
         popupWindow.setTouchInterceptor(new View.OnTouchListener() {
