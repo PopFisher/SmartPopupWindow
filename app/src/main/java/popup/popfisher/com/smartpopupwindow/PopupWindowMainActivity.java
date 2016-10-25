@@ -3,6 +3,7 @@ package popup.popfisher.com.smartpopupwindow;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -102,6 +103,7 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         final int id = v.getId();
+        System.out.println(Build.MODEL);
         switch (id) {
             case R.id.popup_test_button1:
                 testPopupWindowType1();

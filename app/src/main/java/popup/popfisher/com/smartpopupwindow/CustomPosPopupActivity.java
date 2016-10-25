@@ -18,7 +18,6 @@ public class CustomPosPopupActivity extends Activity {
 
     private PopupWindow mPopupWindow;
     private ListView mListView;
-    private ViewHolder mViewHolder = new ViewHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,19 +83,21 @@ public class CustomPosPopupActivity extends Activity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            final ViewHolder viewHolder;
             if (convertView == null) {
                 convertView = LayoutInflater.from(getBaseContext()).inflate(R.layout.listview_item, null);
-                mViewHolder.moreRoot = convertView.findViewById(R.id.more_root);
-                mViewHolder.moreImgv = convertView.findViewById(R.id.more_imageView);
-                convertView.setTag(mViewHolder);
+                viewHolder = new ViewHolder();
+                convertView.setTag(viewHolder);
             } else {
-                mViewHolder = (ViewHolder) convertView.getTag();
+                viewHolder = (ViewHolder) convertView.getTag();
             }
 
-            mViewHolder.moreRoot.setOnClickListener(new View.OnClickListener() {
+            viewHolder.moreRoot = convertView.findViewById(R.id.more_root);
+            viewHolder.moreImgv = convertView.findViewById(R.id.more_imageView);
+            viewHolder.moreRoot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showPopupWindow(mViewHolder.moreImgv);
+                    showPopupWindow(viewHolder.moreImgv);
                 }
             });
             return convertView;

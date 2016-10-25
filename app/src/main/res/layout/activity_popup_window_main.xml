@@ -1,61 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_popup_window_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
     android:padding="15dp"
-    android:background="@color/colorbg"
     tools:context="popup.popfisher.com.smartpopupwindow.PopupWindowMainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:text="关于PopupWindow的一些使用案例" />
+        android:text="关于PopupWindow的一些使用案例"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/popup_test_button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:paddingTop="20dp"
+        android:background="@drawable/button_bg_selector"
         android:paddingBottom="20dp"
-        android:textColor="@android:color/white"
-        android:text="点击PopupWindow外部不会响应消失事件的情况"/>
+        android:paddingTop="20dp"
+        android:text="点击PopupWindow外部不会响应消失事件的情况"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/popup_test_button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:paddingTop="20dp"
+        android:background="@drawable/button_bg_selector"
         android:paddingBottom="20dp"
-        android:textColor="@android:color/white"
-        android:text="点击PopupWindow外部正常响应消失事件的情况"/>
+        android:paddingTop="20dp"
+        android:text="点击PopupWindow外部正常响应消失事件的情况"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/popup_test_button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:paddingTop="20dp"
+        android:background="@drawable/button_bg_selector"
         android:paddingBottom="20dp"
-        android:textColor="@android:color/white"
-        android:text="自己计算并控制PopupWindow弹出位置的情况"/>
+        android:paddingTop="20dp"
+        android:text="自己计算并控制PopupWindow弹出位置的情况"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/popup_test_button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg_selector"
         android:paddingBottom="20dp"
         android:paddingTop="20dp"
         android:text="指定View,向下向上弹出，有箭头，showAsDropDown实现"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/black" />
 
 </LinearLayout>
