@@ -9,10 +9,13 @@
 效果如下图所示：
 
 问题1截图：
+
 ![不会响应外部点击消失事件的情况](/docpic/1.png)
 
 问题2截图：
+
 ![动态计算弹出框的位置](/docpic/2.png)    ![动态计算弹出框的位置](/docpic/3.png)
 
 问题3截图
+
 ![第一排左边按钮菜单](/docpic/topleft.png)   ![第一排右边按钮菜单-出乎意料了](/docpic/topright.png)   ![第二排中间按钮菜单](/docpic/bottomcenter.png)  
