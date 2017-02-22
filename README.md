@@ -5,6 +5,7 @@
 2. PopupWindow精确计算要显示位置原理和方法，博文地址：[http://www.cnblogs.com/popfisher/p/5608436.html](http://www.cnblogs.com/popfisher/p/5608436.html "PopupWindow精确计算要显示位置原理和方法")
 3. 不得不吐槽的Android PopupWindow的几个痛点（实现带箭头的上下文菜单遇到的坑），博文地址：[http://www.cnblogs.com/popfisher/p/5944054.html](http://www.cnblogs.com/popfisher/p/5944054.html "不得不吐槽的Android PopupWindow的几个痛点")
 
+4. Android7.0 PopupWindow的兼容问题
 
 ## 效果如下图所示：##
 
@@ -19,3 +20,33 @@
 ### 问题3截图
 
 ![第一排左边按钮菜单](/docpic/topleft.png	"符合预期")   ![第一排右边按钮菜单](/docpic/topright.png "出乎意料了,不符合预期")   ![第二排中间按钮菜单](/docpic/bottomcenter.png "符合预期")  
+
+### 问题4相关截图
+
+![7.0主Activity](/docpic/7.0.png	"符合预期")
+
+**1. PopupWindow高宽都设置为match\_parent:从屏幕左上角弹出**
+
+![](/docpic/7.0_1.png	"PopupWindow高宽都设置为match_parent")
+
+**2. 宽度wrap\_content-高度match\_parent:从屏幕左上角弹出**
+
+![](/docpic/7.0_2.png	"宽度wrap_content-高度match_parent")
+
+**3. 宽度match\_parent-高度wrap\_content:从anchorView下方弹出**
+
+![](/docpic/7.0_3.png	"宽度match_parent-高度wrap_content")
+
+**4. 宽度wrap_content-高度大于anchorView到屏幕底部的距离:从anchorView上方弹出，与anchorView左对齐**
+
+![](/docpic/7.0_4.png	"宽度wrap_content-高度大于anchorView到屏幕底部的距离")
+
+**5. showAtLocation传入Gravity.Bottom:从anchorView下方弹出**
+
+![](/docpic/7.0_5.png	"宽度wrap_content-高度大于anchorView到屏幕底部的距离")
+
+**6. 调用update方法更新第5点中弹出PopupWindow，发现PopupWindow的Gravity发生了改变**
+
+详细可以参考 [http://www.jianshu.com/p/0df10893bf5b](http://www.jianshu.com/p/0df10893bf5b "PopupWindow 在 Android N(7.0) 的兼容性问题")
+
+![](/docpic/7.0_6.png	"调用update方法更新弹出Popup")
