@@ -16,6 +16,7 @@
         </activity>
         <activity android:name=".CustomPosPopupActivity" />
         <activity android:name=".TopBottomArrowPopupActivity" />
+        <activity android:name=".Android7_0PopupActivity" />
     </application>
 
 </manifest>

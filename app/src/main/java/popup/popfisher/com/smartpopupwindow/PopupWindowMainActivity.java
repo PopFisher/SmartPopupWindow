@@ -18,6 +18,7 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
     private View mButton2;
     private View mButton3;
     private View mButton4;
+    private View mButton5;
 
     private PopupWindow mPopupWindow;
 
@@ -52,6 +53,9 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
 
     private void testPopupWindowType1() {
         View contentView = getPopupWindowContentView();
+        // 创建PopupWindow时候指定高宽时showAsDropDown能够自适应(能够根据剩余空间自动选中向上向下弹出)
+        // 如果设置为wrap_content,showAsDropDown会认为下面空间一直很充足（我以认为这个Google的bug）
+        // 备注如果PopupWindow里面有ListView,ScrollView时，一定要动态设置PopupWindow的大小
         mPopupWindow = new PopupWindow(contentView,
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         // 如果不设置PopupWindow的背景，有些版本就会出现一个问题：无论是点击外部区域还是Back键都无法dismiss弹框
@@ -86,11 +90,17 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
         startActivity(intent);
     }
 
+    private void testPopupWindowType5() {
+        Intent intent = new Intent(this, Android7_0PopupActivity.class);
+        startActivity(intent);
+    }
+
     private void initView() {
         mButton1 = findViewById(R.id.popup_test_button1);
         mButton2 = findViewById(R.id.popup_test_button2);
         mButton3 = findViewById(R.id.popup_test_button3);
         mButton4 = findViewById(R.id.popup_test_button4);
+        mButton5 = findViewById(R.id.popup_test_button5);
     }
 
     private void bindViewListeners() {
@@ -98,6 +108,7 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
         mButton2.setOnClickListener(this);
         mButton3.setOnClickListener(this);
         mButton4.setOnClickListener(this);
+        mButton5.setOnClickListener(this);
     }
 
     @Override
@@ -116,6 +127,9 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
                 break;
             case R.id.popup_test_button4:
                 testPopupWindowType4();
+                break;
+            case R.id.popup_test_button5:
+                testPopupWindowType5();
                 break;
             default:
                 break;

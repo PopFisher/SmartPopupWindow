@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_popup_window_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    tools:context="popup.popfisher.com.smartpopupwindow.PopupWindowMainActivity">
+
+    <Button
+        android:id="@+id/buttion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="高宽都设置为match_parent"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/buttion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="宽度wrap_content-高度match_parent"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/buttion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="宽度match_parent-高度wrap_content"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/buttion4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="宽度wrap_content-高度大于anchorView到屏幕底部的距离"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttion5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="showAtLocation传入Gravity.Bottom"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttion6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="更新左边弹出Popup"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</LinearLayout>
