@@ -1,6 +1,7 @@
 package popup.popfisher.com.smartpopupwindow;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -65,8 +66,14 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
         }
     }
 
+    private View createPopupContentView(Context context) {
+        final View contentView = LayoutInflater.from(context).inflate(R.layout.popup_empty_content_layout, null);
+        contentView.setOnClickListener(mClickContentCancelListener);
+        return contentView;
+    }
+
     public PopupWindow showTipPopupWindow1(final View anchorView) {
-        final View contentView = LayoutInflater.from(anchorView.getContext()).inflate(R.layout.popup_empty_content_layout, null);
+        final View contentView = createPopupContentView(anchorView.getContext());
         final PopupWindow popupWindow = new PopupWindow(contentView,
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, true);
         // anchorView 上方下放的空间都不够时，Window从屏幕左上角开始显示
@@ -75,7 +82,7 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
     }
 
     public PopupWindow showTipPopupWindow2(final View anchorView) {
-        final View contentView = LayoutInflater.from(anchorView.getContext()).inflate(R.layout.popup_empty_content_layout, null);
+        final View contentView = createPopupContentView(anchorView.getContext());
         final PopupWindow popupWindow = new PopupWindow(contentView,
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT, true);
         // anchorView 下面的空间足够，Window显示时会显示在 anchorView 下面
@@ -86,7 +93,7 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
     }
 
     public PopupWindow showTipPopupWindow3(final View anchorView) {
-        final View contentView = LayoutInflater.from(anchorView.getContext()).inflate(R.layout.popup_empty_content_layout, null);
+        final View contentView = createPopupContentView(anchorView.getContext());
         final PopupWindow popupWindow = new PopupWindow(contentView,
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         // anchorView 下面的空间足够，Window显示时会显示在 anchorView 下面
@@ -95,7 +102,7 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
     }
 
     public PopupWindow showTipPopupWindow4(final View anchorView) {
-        final View contentView = LayoutInflater.from(anchorView.getContext()).inflate(R.layout.popup_empty_content_layout, null);
+        final View contentView = createPopupContentView(anchorView.getContext());
         final int pos[] = new int[2];
         anchorView.getLocationOnScreen(pos);
         int windowHeight = ScreenUtils.getScreenHeight(getApplicationContext()) - pos[1];
@@ -107,7 +114,7 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
     }
 
     public PopupWindow showTipPopupWindow5(final View anchorView) {
-        final View contentView = LayoutInflater.from(anchorView.getContext()).inflate(R.layout.popup_empty_content_layout, null);
+        final View contentView = createPopupContentView(anchorView.getContext());
         final int pos[] = new int[2];
         anchorView.getLocationOnScreen(pos);
         int windowHeight = ScreenUtils.getScreenHeight(getApplicationContext()) - pos[1];
@@ -125,6 +132,15 @@ public class Android7_0PopupActivity extends Activity implements View.OnClickLis
             mCurPopupWindow.update();
         }
     }
+
+    private View.OnClickListener mClickContentCancelListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (mCurPopupWindow != null) {
+                mCurPopupWindow.dismiss();
+            }
+        }
+    };
 
     @Override
     public void onBackPressed() {

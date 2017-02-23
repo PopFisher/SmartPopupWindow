@@ -5,7 +5,7 @@
 2. PopupWindow精确计算要显示位置原理和方法，博文地址：[http://www.cnblogs.com/popfisher/p/5608436.html](http://www.cnblogs.com/popfisher/p/5608436.html "PopupWindow精确计算要显示位置原理和方法")
 3. 不得不吐槽的Android PopupWindow的几个痛点（实现带箭头的上下文菜单遇到的坑），博文地址：[http://www.cnblogs.com/popfisher/p/5944054.html](http://www.cnblogs.com/popfisher/p/5944054.html "不得不吐槽的Android PopupWindow的几个痛点")
 
-4. Android7.0 PopupWindow的兼容问题
+4. Android7.0 PopupWindow的兼容问题，修复了问题1和3中描述的问题，但是由引入了新的问题
 
 ## 效果如下图所示：##
 
@@ -23,7 +23,7 @@
 
 ### 问题4相关截图
 
-![7.0主Activity](/docpic/7.0.png	"符合预期")
+![7.0主Activity](/docpic/7.0.png	"7.0 PopupWindow兼容性测试")
 
 **1. PopupWindow高宽都设置为match\_parent:从屏幕左上角弹出**
 
