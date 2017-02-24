@@ -1,11 +1,13 @@
 # SmartPopupWindow #
 提供关于PopupWindow使用过程中遇到的一些特殊问题的解决方案
 
-1. PopupWindow不响应点击外部消失和返回键消失的解决方法，博文地址：<br>[http://www.cnblogs.com/popfisher/p/5608717.html](http://www.cnblogs.com/popfisher/p/5608717.html "PopupWindow不响应点击外部消失和返回键消失的解决方法")
-2. PopupWindow精确计算要显示位置原理和方法，博文地址：<br>[http://www.cnblogs.com/popfisher/p/5608436.html](http://www.cnblogs.com/popfisher/p/5608436.html "PopupWindow精确计算要显示位置原理和方法")
-3. 不得不吐槽的Android PopupWindow的几个痛点（实现带箭头的上下文菜单遇到的坑），博文地址：<br>[http://www.cnblogs.com/popfisher/p/5944054.html](http://www.cnblogs.com/popfisher/p/5944054.html "不得不吐槽的Android PopupWindow的几个痛点")
+1. PopupWindow不响应点击外部消失和返回键消失的解决方法<br>博文地址：[http://www.cnblogs.com/popfisher/p/5608717.html](http://www.cnblogs.com/popfisher/p/5608717.html "PopupWindow不响应点击外部消失和返回键消失的解决方法")
 
-4. Android7.0 PopupWindow的兼容问题，修复了问题1和3中描述的问题，但是由引入了新的问题吗，具体详情<br> 博文地址：[http://www.cnblogs.com/popfisher/p/6434757.html](http://www.cnblogs.com/popfisher/p/6434757.html "博文地址") <br> Github地址[https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md](https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md "7.0PopupWindow介绍Github地址")
+2. PopupWindow精确计算要显示位置原理和方法<br>博文地址：[http://www.cnblogs.com/popfisher/p/5608436.html](http://www.cnblogs.com/popfisher/p/5608436.html "PopupWindow精确计算要显示位置原理和方法")
+
+3. 不得不吐槽的Android PopupWindow的几个痛点（实现带箭头的上下文菜单遇到的坑）<br>博文地址：[http://www.cnblogs.com/popfisher/p/5944054.html](http://www.cnblogs.com/popfisher/p/5944054.html "不得不吐槽的Android PopupWindow的几个痛点")
+
+4. Android7.0 PopupWindow的兼容问题，修复了问题1和3中描述的问题，但是由引入了新的问题吗，具体详情<br> 博文地址：[http://www.cnblogs.com/popfisher/p/6434757.html](http://www.cnblogs.com/popfisher/p/6434757.html "博文地址") <br> Github地址：[https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md](https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md "7.0PopupWindow介绍Github地址")
 
 
 ## 效果如下图所示：##
