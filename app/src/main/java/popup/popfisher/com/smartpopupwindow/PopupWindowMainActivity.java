@@ -19,6 +19,7 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
     private View mButton3;
     private View mButton4;
     private View mButton5;
+    private View mButton6;
 
     private PopupWindow mPopupWindow;
 
@@ -95,12 +96,18 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
         startActivity(intent);
     }
 
+    private void testPopupWindowType6() {
+        Intent intent = new Intent(this, ScreenChangeUpdatePopupActivity.class);
+        startActivity(intent);
+    }
+
     private void initView() {
         mButton1 = findViewById(R.id.popup_test_button1);
         mButton2 = findViewById(R.id.popup_test_button2);
         mButton3 = findViewById(R.id.popup_test_button3);
         mButton4 = findViewById(R.id.popup_test_button4);
         mButton5 = findViewById(R.id.popup_test_button5);
+        mButton6 = findViewById(R.id.popup_test_button6);
     }
 
     private void bindViewListeners() {
@@ -109,6 +116,7 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
         mButton3.setOnClickListener(this);
         mButton4.setOnClickListener(this);
         mButton5.setOnClickListener(this);
+        mButton6.setOnClickListener(this);
     }
 
     @Override
@@ -130,6 +138,9 @@ public class PopupWindowMainActivity extends Activity implements View.OnClickLis
                 break;
             case R.id.popup_test_button5:
                 testPopupWindowType5();
+                break;
+            case R.id.popup_test_button6:
+                testPopupWindowType6();
                 break;
             default:
                 break;

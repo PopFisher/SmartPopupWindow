@@ -77,4 +77,16 @@
         android:textAllCaps="false"
         android:textColor="@android:color/black" />
 
+    <Button
+        android:id="@+id/popup_test_button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg_selector"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="屏幕旋转监听回调中调用update方法可能会失效"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black" />
+
 </LinearLayout>

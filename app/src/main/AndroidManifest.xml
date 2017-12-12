@@ -17,6 +17,12 @@
         <activity android:name=".CustomPosPopupActivity" />
         <activity android:name=".TopBottomArrowPopupActivity" />
         <activity android:name=".Android7_0PopupActivity" />
+        <activity
+            android:name=".ScreenChangeUpdatePopupActivity"
+            android:label="ScreenChangeUpdatePopupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" >
+        </activity>
     </application>
 
 </manifest>
