@@ -1,4 +1,4 @@
-# 屏幕旋转时调用PopupWindow update方法更新位置失效的问题
+# 屏幕旋转时调用PopupWindow update方法更新位置失效的问题及解决方案
 
 &emsp;&emsp; 接到一个博友的反馈，在屏幕旋转时调用PopupWindow的update方法失效。使用场景如下：在一个Activity中监听屏幕旋转事件，在Activity主布局文件中有个按钮点击弹出一个PopupWindow，另外在主布局文件中有个ListView。测试结果发现：如果ListView设置为可见（visibile）的话，屏幕旋转时调用的update方法无效，如果ListView设置为不可见（gone）或者直接删除的话，屏幕旋转时调用的update方法就生效。下面先展示两种情况的效果图对比。
 

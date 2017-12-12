@@ -9,6 +9,8 @@
 
 4. Android7.0 PopupWindow的兼容问题，修复了问题1和3中描述的问题，但是由引入了新的问题吗，具体详情<br> 博文地址：[http://www.cnblogs.com/popfisher/p/6434757.html](http://www.cnblogs.com/popfisher/p/6434757.html "博文地址") <br> Github地址：[https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md](https://github.com/PopFisher/SmartPopupWindow/blob/master/7.0PopupWindow.md "7.0PopupWindow介绍Github地址")
 
+5. 屏幕旋转时调用PopupWindow update方法更新位置失效的问题及解决方案。<br>博文地址：[http://www.cnblogs.com/popfisher/p/8029616.html](http://www.cnblogs.com/popfisher/p/8029616.html "博客园地址")<br>Github地址：[https://github.com/PopFisher/SmartPopupWindow/blob/master/ScreenRotateUpdatePopup.md](https://github.com/PopFisher/SmartPopupWindow/blob/master/ScreenRotateUpdatePopup.md "ScreenRotateUpdatePopup.md")
+
 
 ## 效果如下图所示：##
 
